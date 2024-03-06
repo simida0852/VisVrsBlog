@@ -16,6 +16,7 @@ let coverAlt = '';
 
 if (post && post.data) {
   ({ title, description, cover, coverAlt } = post.data);
+  console.log('cover: ', cover);
 }
 ---
 <BaseLayout pageTitle={title} description={description} ogImage={cover}>
