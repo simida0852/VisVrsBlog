@@ -1,14 +1,14 @@
 ---
 title: 如何在React中使用Props
 slug: 如何在React中使用Props
-pubDate: 2022-05-30 18:34:22
+pubDate: 2022-05-30
 tags: 
   - 前端
   - React
   - 教程
 description: 介绍React Props的概念以及如何在React中使用Props
 author: xf
-cover: src/images/reactjs-1.webp
+cover: src/images/nestjs-1.webp
 coverAlt: react
 category:
   - 前端
