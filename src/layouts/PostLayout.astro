@@ -16,7 +16,6 @@ let coverAlt = '';
 
 if (post && post.data) {
   ({ title, description, cover, coverAlt } = post.data);
-  console.log('cover: ', cover);
 }
 ---
 <BaseLayout pageTitle={title} description={description} ogImage={cover}>
@@ -25,15 +24,16 @@ if (post && post.data) {
       <Picture
         src={cover}
         alt={coverAlt}
-        width={672}
-        height={378}
-        formats={['avif', 'webp']}
-        fallbackFormat='webp'
+        inferSize
+        widths={[488, 672]}
+        sizes="(max-width: 488px) 488px, 672px"
+        formats={['avif']}
+        fallbackFormat='avif'
         loading='eager'
       />
     )}
   </div>
-  <article class='max-w-2xl mx-auto'>
+  <article class='max-w-2xl mx-auto text-justify'>
     <slot />
   </article>
 </BaseLayout>
