@@ -1,4 +1,4 @@
-import { z, defineCollection } from "astro:content";
+import { defineCollection, z } from "astro:content";
 
 const postsCollection = defineCollection({
   schema: ({ image }) => z.object({
@@ -9,7 +9,7 @@ const postsCollection = defineCollection({
     coverAlt: z.string(),
     category: z.array(z.string()),
     tags: z.array(z.string()),
-    author: z.string()
+    author: z.string(),
   }),
 });
 

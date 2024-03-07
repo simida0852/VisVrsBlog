@@ -1,10 +1,10 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig, passthroughImageService } from 'astro/config';
 
+import mdx from '@astrojs/mdx';
 // Utils and plugins
 import remarkModifiedTime from './src/utils/remark-modified-time.mjs';
-import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
-import mdx from '@astrojs/mdx';
+import tailwind from '@astrojs/tailwind';
 
 // Astro Configuration
 export default defineConfig({
@@ -12,7 +12,7 @@ export default defineConfig({
   site: 'https://visvrs.vercel.app',
 
   trailingSlash: 'never',
-  
+
   prefetch: {
     prefetchAll: true
   },
@@ -33,5 +33,8 @@ export default defineConfig({
 
     // MDX support
     mdx()
-  ]
+  ],
+  image: {
+    service: passthroughImageService(),
+  }
 });
