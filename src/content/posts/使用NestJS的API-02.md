@@ -8,7 +8,7 @@ tags:
   - 教程
 description: 使用NestJS的API-02
 author: xf
-cover: src/images/cat.webp
+cover: src/images/cat-1.webp
 coverAlt: Nestjs
 category:
   - 后端
